@@ -1,8 +1,7 @@
-import { ApolloServer } from 'apollo-server';
-import typeDefs from './data/schema';
-import resolvers from './data/resolvers';
-
-
+import "@babel/polyfill";
+import { ApolloServer } from "apollo-server";
+import typeDefs from "./data/schema";
+import resolvers from "./data/resolvers";
 
 const server = new ApolloServer({
   typeDefs,
