@@ -1,11 +1,7 @@
-import { getString } from "./connectors";
 import { getSchools, getWithinDistance } from "./dbConnect";
 
 const resolvers = {
   Query: {
-    testString(_, args) {
-      return getString(args);
-    },
     async findSchoolByName(_, args) {
       try {
         const results = await getSchools(args);
