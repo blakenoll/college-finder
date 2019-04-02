@@ -1,0 +1,44 @@
+{
+  "name": "GQL-Starter",
+  "version": "2.0.0",
+  "description": "GraphQL boiler plate for express using apollo-server-express",
+  "main": "server.js",
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "apollo-server": "^2.2.6",
+    "csv-parser": "^2.1.0",
+    "dotenv": "^7.0.0",
+    "graphql": "^0.13.2",
+    "mongodb": "^3.1.10",
+    "mongoose": "^5.4.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
+    "nodemon": "^1.18.10"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "useBuiltIns": "entry"
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "npm run build && node ./dist/server.js",
+    "dev": "nodemon ./src/server.js --exec babel-node",
+    "build": "babel src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blakenoll/gql-starter"
+  },
+  "author": "Blake Noll",
+  "license": "MIT",
+  "homepage": "https://github.com/blakenoll/gql-starter#readme"
+}
