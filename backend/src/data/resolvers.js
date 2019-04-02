@@ -26,9 +26,6 @@ const resolvers = {
     blurb(school) {
       return school.RC_profile;
     },
-    state(school) {
-      return school.state;
-    },
     distance(school) {
       return Math.round(((school.dist.calculated / 1609.344) * 100) / 100);
     }
