@@ -5,7 +5,7 @@ const typeDefs = gql`
   type Query {
     testString(text: String): String
     findSchoolByName(query: String): [School]
-    findWithinDistance(lng: Float, lat: Float, miles: Int): [School]
+    findWithinDistance(zip: Int, miles: Int): [School]
   }
 
   type School {
@@ -23,6 +23,7 @@ const typeDefs = gql`
     financialAid: FinAid
     zip: String
     distance: Float
+    geo: Geo
   }
 
   type General {
@@ -45,6 +46,11 @@ const typeDefs = gql`
     average_debt: String
     priority_date_1: String
     work_study: String
+  }
+
+  type Geo {
+    lng: Float
+    lat: Float
   }
 `;
 

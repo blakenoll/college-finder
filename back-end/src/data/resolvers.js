@@ -29,6 +29,15 @@ const resolvers = {
     distance(school) {
       return Math.round(((school.dist.calculated / 1609.344) * 100) / 100);
     }
+  },
+
+  Geo: {
+    lng(geo) {
+      return geo.coordinates[0];
+    },
+    lat(geo) {
+      return geo.coordinates[1];
+    }
   }
 };
 
